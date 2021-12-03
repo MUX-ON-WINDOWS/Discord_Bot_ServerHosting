@@ -29,9 +29,6 @@ Client.on("message", message => {
     }
   }
 });
-
-
-
 // /help command
 Client.on("message", message => {
 if (message.content === "/Help") {
@@ -43,5 +40,5 @@ if (message.content === "/Help") {
   - Show your self
   `)}
 });
-});
+
 Client.login("Your token")
