@@ -15,4 +15,4 @@ Client.on("message", message => {
 })
 
 
-Client.login("OTE2MzM4NzkwMTkxMjI2ODgx.YaotAA.XbXyqnbDa8W9X5QSm7M8Um3vLok")
+Client.login("Your token")
