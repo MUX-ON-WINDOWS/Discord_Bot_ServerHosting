@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const token = 'Your token';
 // this the icon you need to put infront your command to let the command work
-const prefix = '/';
+const prefix = '%';
 
 // The bot will display Watching over MUX_ON_WINDOWS
 // Activity status (idle etc.)
@@ -43,15 +43,9 @@ bot.on("message", message => {
       - /projects
       `)
   } else
-  if(command === 'ping') {
-    message.reply('Pong');
-  } else
   if (command === "face") {
     message.channel.send("( ͡° ͜ʖ ͡°)╭∩╮");
-  } else
-  if (command === "porn") {
-    message.channel.send("Wat denk je nu zelf vies ventje!");
-  } else
+  }  else
   // My projects 50/50
   if (command === "projects"){
     var d = Math.random();
@@ -64,4 +58,5 @@ bot.on("message", message => {
     }
   }
 })
+
 bot.login(token);
