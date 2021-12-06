@@ -18,7 +18,7 @@ Client.on("message", message => {
     );
   }
   // My projects 50/50
-  if (message.content === "/projects") {
+  if (message.content === "/projects" || message.content === "/Projects" || message.content === "/Project" || message.content === "/project"){
     var d = Math.random();
     if (d < 0.5){
     // 50% chance of being here
@@ -29,10 +29,16 @@ Client.on("message", message => {
     }
   }
 });
+Client.on("message", message => {
+  if (message.content === "/Count" || message.content === "/count") {
+
+}
+})
+
 // /help command
 Client.on("message", message => {
-if (message.content === "/Help") {
-  message.channel.send(`
+  if (message.content === "/Help" || message.content === "/help") {
+message.channel.send(`
   Probeer deze commands te gebruiken:
   - Ik sloop je of Ik hoek je
   - Kom dan
@@ -40,5 +46,6 @@ if (message.content === "/Help") {
   - Show your self
   `)}
 });
+
 
 Client.login("Your token")
