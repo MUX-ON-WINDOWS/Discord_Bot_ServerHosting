@@ -1,12 +1,14 @@
 {
-  "name": "hello-sqlite",
-  "version": "0.0.1",
-  "description": "A Node app with SQLite database, instantly up and running.",
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
+    "discord-rich-presence": "^0.0.8",
+    "discord-rpc": "^4.0.1",
     "discord.js": "^12.5.3",
     "fastify": "^3.24.0",
     "fastify-formbody": "^5.2.0",
@@ -20,12 +22,18 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-sqlite"
+    "url": "git+https://github.com/MUX-ON-WINDOWS/discord_bot.git"
   },
   "license": "MIT",
   "keywords": [
     "node",
     "glitch",
     "sqlite"
-  ]
+  ],
+  "author": "MUX_ON_WINDOWS",
+  "bugs": {
+    "url": "https://github.com/MUX-ON-WINDOWS/discord_bot/issues"
+  },
+  "homepage": "https://github.com/MUX-ON-WINDOWS/discord_bot#readme",
+  "devDependencies": {}
 }
