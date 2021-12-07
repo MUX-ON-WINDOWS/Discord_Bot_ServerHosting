@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const token = 'Your token';
-const keepAlive = require('./bot.js')
+const token = 'OTE2MzM4NzkwMTkxMjI2ODgx.YaotAA.qSypTOB9RT3p-aSvw_Cr8ZMBY2E';
+const keepAlive = require('./server.js')
 keepAlive();
 // this the icon you need to put infront your command to let the command work
 const prefix = '/';
