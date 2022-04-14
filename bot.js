@@ -11,9 +11,7 @@ const prefix = '/';
 
 bot.on('ready', () => {
   console.log(`${bot.user.tag} has logged in.`);
-  bot.user.setActivity('over MUX_ON_WINDOWS', {type: "WATCHING"})
-  .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
-  .catch(console.error);
+  bot.user.setPresence({ activities: [{ name: `MUX_ON_WINDOWS`, type: `WATCHING` }], status: 'dnd', afk: false });
 });
 
 bot.on("message", message => {
@@ -27,7 +25,7 @@ bot.on("message", message => {
       .setTitle('MaxArnoutsDevelopment')
       .setURL('https://maxarnouts.nl')
       .setAuthor('Max Arnouts')
-      .setDescription('This is a test Description which we will see.')
+      .setDescription('This is me check me out if ur interested.')
       .setColor('0xff0000')
     try {
       message.reply(infoEmbed);
@@ -39,21 +37,21 @@ bot.on("message", message => {
   if (command === "help") {
     message.reply(`
       Probeer deze commands te gebruiken:
-      - /face
-      - /projects
+      - %face
+      - %projects
       `)
-  } else
-  if (command === "face") {
-    message.channel.send("( ͡° ͜ʖ ͡°)╭∩╮");
-  }  else
-  // My projects 50/50
-  if (command === "projects"){
+  } else if (command === "face") {
+    var q = Math.random();
+    if (q < 0.5) {
+      message.channel.send("ʕっ•ᴥ•ʔっ");
+    } else if (q < 1) {
+      message.channel.send("( ͡° ͜ʖ ͡°)╭∩╮");
+    }
+  } else if (command === "projects") {
     var d = Math.random();
-    if (d < 0.5){
-    // 50% chance of being here
+    if (d < 0.5) {
       message.channel.send("https://cdn.glitch.me/5bc11192-3217-4ac2-a1ea-14bf684e28ec%2Fhomepage_RS.png?v=1638559371704")
     } else if (d < 1) {
-    // 50% chance of being here
       message.channel.send("https://cdn.glitch.me/5bc11192-3217-4ac2-a1ea-14bf684e28ec%2FHomepage_KB.png?v=1638559366482")
     }
   }
